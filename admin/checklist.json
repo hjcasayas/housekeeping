@@ -1,0 +1,78 @@
+{
+		"check" :  [
+	
+	{
+		"checklist":"Unreturned Documents", 
+		"class":"mainlist",
+		"id": "documents",
+		"sublists":[
+			{"sublist":"Reference Documents (Filer)","id":"documents","class":"sublist"},
+			{"sublist":"Manuals", "id":"manuals", "class":"sublist"},
+			{"sublist":"Circulated Memorandum", "id":"memorandum", "class":"sublist"}
+		]
+
+	},
+
+	{
+		"checklist": "Scattered Office Supplies",
+		"class": "mainlist",
+		"id": "office-supplies",
+		"sublists" : [
+			{"sublist":"Ballpen", "id":"ballpen", "class": "sublist"},
+			{"sublist":"Marker (Stabilo)","id":"marker", "class":"sublist"},
+			{"sublist":"Pencil","id":"pencil", "class":"sublist"},
+			{"sublist":"Ruler","id":"ruler", "class":"sublist"},
+			{"sublist":"Stapler","id":"stapler", "class":"sublist"},
+			{"sublist":"Scissors","id":"scissors", "class":"sublist"},
+			{"sublist":"Calculator","id":"calculator", "class":"sublist"},
+			{"sublist":"Other Office Supplies (if any)","id":"others-office", "class":"sublist"}
+		]
+	},
+
+	{
+		"checklist":"Unnecessary Papers",
+		"class": "mainlist",
+		"id": "papers",
+		"sublists" : []
+	},
+
+	{
+		"checklist":"Personal Belongings (decors are Ok now)",
+		"class":"mainlist",
+		"id": "personal",
+		"sublists" : [
+			{"sublist":"Mug/Tumbler", "id": "mug", "class": "sublist"},
+			{"sublist":"Mirror","id": "mirror", "class": "sublist"},
+			{"sublist":"Rubbing Alcohol","id": "alcohol", "class": "sublist"},
+			{"sublist":"Jacket/Sweater","id": "jacket", "class": "sublist"},
+			{"sublist":"Slippers/Sandals", "id": "slippers", "class": "sublist"},
+			{"sublist":"Other Personal Belongings (if any)", "id": "others-personal", "class": "sublist"}
+		]
+
+	},
+
+	{
+		"checklist" : "Unreturned Chair",
+		"class" : "mainlist",
+		"id": "chair",
+		"sublists" : []
+	},
+
+	{
+		"checklist" : "Powered Monitor/Laptop",
+		"class" : "mainlist",
+		"id": "monitor",
+		"sublists" : []
+	},
+
+	{
+		"checklist" : "Powered UPS",
+		"class" : "mainlist",
+		"id": "ups",
+		"sublists" : []
+	}
+
+	
+]	
+
+}

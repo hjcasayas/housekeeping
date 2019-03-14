@@ -1,0 +1,534 @@
+/*
+Project: Housekeeping
+Author: hjcasayas
+Github: https://github.com/hjcasayas/housekeeping
+*/
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+
+table {
+	width: 100%;
+}
+
+/*Clearfix*/
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	max-width: 920px;
+	margin: 0px auto;
+	height: 100%;
+	padding:20px;
+}
+
+/*header.php*/
+
+.container-profile {
+	padding: 10px;
+	margin: 0px auto;
+	border: 2px solid black;
+	background-color: #f33;
+	color: white;
+	align-self: flex-start;
+}
+
+.container-profile #fullname {
+	/*text-decoration: underline;*/
+	/*color: #999;*/
+}
+
+.container-header {
+	padding: 0px;
+	margin: 0px auto;
+}
+
+.container-header ul.ul-header {
+	padding: 0px;
+	margin: 0px;
+}
+
+.container-header ul.ul-header li{
+	display: inline-block;
+	text-decoration: none;
+	margin-right: 3px;
+}
+
+.container-header ul.ul-header li#logout {
+	margin-right: 0px;
+}
+
+.container-header ul.ul-header li a:link, 
+.container-header ul.ul-header li a:visited {
+	border: 1px solid #09c;
+	padding: 5px 15px;
+	text-decoration: none;
+	color: #09c;
+	border-radius: 6px;
+}
+
+.container-header ul.ul-header li a:hover {
+	background-color: #09c;
+	color: white;
+}
+
+#li-add-user, #li-change-password, #logout  {
+	float: right;
+}
+
+.placeholder-style::placeholder {
+	color: #E8D0A9;
+	font-size: 115%;
+}
+
+
+.container-header ul.ul-header li.li-background a:link,
+.container-header ul.ul-header li.li-background a:visited {
+	background-color: #09c;
+	color: white;
+}
+
+/*Profile and Daily Report*/
+.container-profile-report {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.container-daily-report {
+	flex-grow: 2;
+	margin-left: 10px;
+	padding: 0px 10px;
+}
+
+#table-daily-report {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#table-daily-report tr {
+	border-bottom: 1px solid #033;
+}
+
+#table-daily-report tr:nth-child(odd) {
+	background-color: #d3d3d3;
+}
+
+#table-daily-report #daily-report-main-row {
+	background-color: #699;
+	color: white;
+}
+
+#table-daily-report th,
+#table-daily-report td {
+	padding: 4px;
+	text-align: left;
+}
+
+/***Login Styles***/
+.wrapper-login {
+	padding: 0px;
+	margin: 0px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: url('img/cleandesk.jpg') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.container-login {
+	max-width: 350px;
+	height: auto;
+	opacity: 0.85;
+	padding: 20px;
+	position: relative;
+	top: 100px;
+	left: 100px;
+	background-color: black;
+	opacity: 0.85;
+	border-radius: 10px;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+}
+
+#housekeeping {
+	text-align: center;
+	font-size: 250%;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.login-input {
+	padding: 8px;
+	margin: 0;
+	border: none;
+}
+
+.login-input:focus {
+	outline: none;
+}
+
+.login-input[type=text], .login-input[type=password] {
+	background-color: black;
+	border-bottom: 2px solid #E8D0A9;
+	margin: 2px 0;
+	color: #E8D0A9;	
+}
+
+.login-input[type=text]:focus, .login-input[type=password]:focus {
+	color: #E8D0A9;
+	outline: none;
+}
+
+
+
+.login-input[type=text]:focus, .login-input[type=password]:focus {
+	color: #E8D0A9;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  	-webkit-text-fill-color: #E8D0A9;
+  	transition: background-color 5000s ease-in-out 0s;
+}
+
+#login-submit {
+	margin-top: 20px;
+	color: black;
+	background-color: #E8D0A9;
+	border-radius: 10px;
+	font-size: 120%;
+	cursor: pointer;
+}
+
+#login-submit:hover {
+	font-weight: bold;
+	background-color: #EABE59;
+	opacity: 1;
+}
+
+#login-quote p {
+	text-align: center;
+	font-size: 105%;
+	font-weight: italic;
+	color: white;
+}
+
+.credits a {
+	position: fixed;
+	bottom: 25px;
+	right: 5px;
+	opacity: 0.5;
+}
+
+.error {
+	color: red;
+}
+
+/***addUser***/
+
+.addUser-container {
+	height: 100%;
+  	width: 100%;
+  	margin: 0px auto;
+  	padding: 0px;
+}
+
+.addUser-input {
+	margin-bottom: 3px;
+  	width: 100%;
+}
+
+.addUser-input[type=checkbox] {
+  width: auto;
+}
+
+/***changePassword***/
+
+.container-change-password {
+	max-width: 400px;
+	max-height: 300px;
+	margin: 0px auto;
+	position: relative;
+	top: 50px;
+	background-color: #E8D0A9;
+	border-radius: 0 15px 0 15px;
+	padding: 20px;
+}
+
+.container-change-password form {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-change-password form input,
+.container-change-password form label {
+	margin-bottom: 5px;
+	font-size: 105%;
+	padding: 5px;
+	border-radius: 10px;
+}
+.container-change-password form label {
+	font-weight: bold;
+}
+
+#submit-change {
+	color: #09C;
+	padding: 4px;
+	border: 1px solid #09C;
+	border-radius: 4px;
+	display: block;
+	width: 100%;
+	margin: 10px auto 0px;
+	text-align: center;
+	background-color: #E8D0A9;
+	cursor: pointer;	
+}
+
+#go-back-home:link,
+#go-back-home:visited {
+	text-decoration: none;
+	color: #09C;
+	padding: 4px;
+	border: 1px solid #09C;
+	border-radius: 4px;
+	display: block;
+	margin: 10px auto 0px;
+	text-align: center;
+}
+
+#submit-change:hover,
+#go-back-home:hover {
+	background-color: #09c;
+	color: #E8D0A9;
+}
+
+/*frontPage.php*/
+
+/*Checklist.php*/
+
+.container-checklist {
+	height: 100%;
+  	margin: 0px auto;
+  	padding: 0px;
+}
+
+table.table-checklist {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+table.table-checklist, 
+table.table-checklist tr , 
+table.table-checklist td, 
+table.table-checklist th{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.members-column {
+	width: 35%;
+}
+
+.comments-column {
+	width: 25%;
+}
+
+table.table-checklist td {
+	padding: 3px;
+}
+
+.main-list {
+	font-size: : 110%;
+	font-weight: bold;
+}
+
+.main-row {
+	background-color: #d3d3d3;
+}
+
+.checkbox-sublist {
+	display: none;
+}
+
+.checkbox-sublist:checked + label  {
+	background-color: white;
+	color: red;
+}
+
+.label-checkbox {
+	background-color: white;
+	border: 0.01em solid black;
+	padding: 0 0.2em;
+	width: 1.3em;
+	display: block;
+	margin: 0px auto;
+	font-size: 75%;
+	color: transparent;
+	cursor: pointer;
+}
+
+#submit-checklist {
+	background-color: white;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #09c;
+	padding: 5px 15px;
+	text-decoration: none;
+	color: #09c;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+}
+#submit-checklist:hover {
+	background-color: #09c;
+	color:white;
+}
+/*Members List*/
+.members-list {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.members-list input[type=checkbox] {
+	display: none;
+}
+
+.members-list input[type=checkbox] + label {
+	margin-right: 0.2em;
+}
+
+
+.members-list input[type=checkbox] + label:before {
+	display:inline-block;
+	content: "\2714";
+	background-color: white;
+	border: 0.01em solid black;
+	padding: 0 0.2em;
+	width: 0.9em;
+	font-size: 75%;
+	margin-right: 0.2em;
+	color: transparent;
+	cursor: pointer;
+}
+
+.members-list input[type=checkbox]:checked + label:before {
+	background-color: white;
+	color: red;		
+}
+
+.hide {
+    display: none;
+}
+
+/*Comments Column*/
+
+.comments-for-user {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 1px;
+}
+
+.comments-for-user input[type=text] {
+	padding-left: 0.5em;
+	width: 75%;
+	height: 14px;
+	margin: 0px;
+	font-size: 10px;
+}
+
+/*Sublist Subnumber*/
+.subnumber {
+	width: 1.3em;
+}
+
+/*Logs*/
+
+#table-logs {
+	border-collapse: collapse;
+}
+
+#table-logs th {
+	padding: 2px;
+}
+
+#thead-logs th {
+	border: none;
+}
+#thead-date-logs {
+	background-color: #09c;
+}
+.thead-column-logs {
+	background-color: #699;
+	color: white;
+}
+
+/*users-table*/
+.contributions-page-container {
+	overflow-x: auto;
+}
+
+#contributions-table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#contributions-table thead {
+	background-color: #699;
+	color: white;
+}
+
+#contributions-table th,
+#contributions-table td {
+	text-align: center;
+}
+
+#contributions-table td.members-td {
+	text-align: left;
+}
+
+#contributions-table th,
+#contributions-table td {
+	padding: 8px 2px;
+	border: 1px solid black;
+}
+
+#contributions-table th {
+	width: 100px;
+}
+
+#contribtions-table-tbody tr:nth-child(even) {
+    background-color: #d3d3d3;
+}
